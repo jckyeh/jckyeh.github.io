@@ -1,7 +1,18 @@
 <head>
-  <title>Test Page: Don't Panic</title>
+  {% if page.title %}
+    <title>{{ page.title }} | Test Page</title>
+  {% else %}
+    <title>Test Page: Don't Panic</title>
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="This is a dangerous site.">
+  {% endif %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
   <link href="/fonts/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/reset.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
